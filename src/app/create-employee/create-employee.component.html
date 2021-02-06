@@ -1,0 +1,42 @@
+<form class="text-center border border-light p-5">
+
+    <p class="h4 mb-4">Sign up</p>
+
+    <div class="form-row mb-4">
+      <div class="col">
+        <!-- First name -->
+        <input type="text" name="firstName" [(ngModel)]="createEmployeeModel.firstName" [ngModelOptions]="{standalone: true}" id="defaultRegisterFormFirstName" class="form-control" placeholder="First name" required minlength="1" >
+      </div>
+      <div class="col">
+        <!-- Last name -->
+        <input type="text" name="lastName"  [(ngModel)]="createEmployeeModel.lastName"  id="defaultRegisterFormLastName" class="form-control" placeholder="Last name" required minlength="1">
+      </div>
+    </div>
+    <div class="form-row mb-4">
+        <div class="col">
+    <!-- Department -->
+    <input type="text" name="department" [(ngModel)]="createEmployeeModel.department"  id="defaultRegisterFormDepartment" class="form-control mb-4" placeholder="Department" required minlength="2">
+</div>
+<div class="col">
+    <!-- Password -->
+    <input type="date" name="dateOfBirth" [(ngModel)]="createEmployeeModel.dateOfBirth"  id="defaultRegisterFormDate" class="form-control" placeholder="Date Of Birth" required=true>
+</div>
+</div>
+<div class="form-control mb-3">
+    <input type="radio" [(ngModel)]="createEmployeeModel.gender"  name="gender" value="Male" required> Male
+    <input type="radio" [(ngModel)]="createEmployeeModel.gender"  name="gender" value="Female" required> Female
+</div>
+    
+
+ 
+    
+
+    <!-- Sign up button -->
+    <button mdbBtn color="info" block="true" class="btn btn-secondary btn-sm" type="button" routerLink="" >Back</button> &nbsp;
+    <button mdbBtn color="info" block="true" class="btn btn-primary btn-sm" type="submit" (click)="createEmployee(createEmployeeModel)">Sign up</button>
+   
+
+   
+
+  </form>
+  <!-- Default form register -->
